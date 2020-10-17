@@ -15,3 +15,9 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+require("css/application.scss")
+import "fontsource-inter";
+import "@fortawesome/fontawesome-free/js/all"
+import 'bootstrap/dist/js/bootstrap'
+import 'bootstrap/dist/css/bootstrap'

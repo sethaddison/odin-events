@@ -7,9 +7,14 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/nav' %>
+    <div class="container mt-5">
+      <%= render_flash_messages dismissible: true %>
+      <%= yield %>
+    </div>
   </body>
 </html>
