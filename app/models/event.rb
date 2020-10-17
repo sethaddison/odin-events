@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   has_many :rsvps, foreign_key: :attended_event_id
   has_many :attendees, through: :rsvps
 
-  scope :past, -> { where('date_time < ?', Date.today).order(:date_time) }
+  scope :past, -> { where('date_time < ?', Date.today).order(date_time: :desc) }
   scope :future, -> { where('date_time > ?', Date.today).order(:date_time) }
 
 end
